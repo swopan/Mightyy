@@ -19,7 +19,7 @@ APP_ID = int(os.environ.get("APP_ID", "23004940"))
 API_HASH = os.environ.get("API_HASH", "25c013f901474cffcad6a9d03e3a06bb")
 
 #Your db channel Id
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002223734735"))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002198773753"))
 
 #OWNER ID
 OWNER_ID = int(os.environ.get("OWNER_ID", "6367302898"))
@@ -28,18 +28,18 @@ OWNER_ID = int(os.environ.get("OWNER_ID", "6367302898"))
 PORT = os.environ.get("PORT", "8080")
 
 #Database 
-DB_URI = "mongodb+srv://sunitverma080:lwYnQJB7WLC50xho@lodubot1.5w14taf.mongodb.net/?retryWrites=true&w=majority&appName=lodubot1"
+DB_URI = "mongodb+srv://sunitverma080:HHLImVG2JPZnerVp@mightybot.hoc7sbn.mongodb.net/?retryWrites=true&w=majority&appName=MIGHTYBOT"
 DB_NAME = os.environ.get("DATABASE_NAME", "filesharexbot")
 
-SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "kingurl.in")
-SHORTLINK_API = os.environ.get("SHORTLINK_API", "ec0d51c38dae62a342b23339d58e5c90e8db5ff3")
-VERIFY_EXPIRE = int(os.environ.get('VERIFY_EXPIRE', 36000)) # Add time in seconds
+SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "inshorturl.com")
+SHORTLINK_API = os.environ.get("SHORTLINK_API", "d085b925c2b0bafde56a5729a018f45655ad9602")
+VERIFY_EXPIRE = int(os.environ.get('VERIFY_EXPIRE', 86300)) # Add time in seconds
 IS_VERIFY = os.environ.get("IS_VERIFY", "True")
 TUT_VID = os.environ.get("TUT_VID","gojfsi/2")
 
 
 #force sub channel id, if you want enable force sub
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
+FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1002240765242"))
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "100"))
 
@@ -47,7 +47,7 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "100"))
 START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.")
 try:
     ADMINS=[]
-    for x in (os.environ.get("ADMINS", "7208538115").split()):
+    for x in (os.environ.get("ADMINS", "7208538115 5170148912 6616938712").split()):
         ADMINS.append(int(x))
 except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
@@ -88,5 +88,7 @@ logging.basicConfig(
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 
+def LOGGER(name: str) -> logging.Logger:
+    return logging.getLogger(name)
 def LOGGER(name: str) -> logging.Logger:
     return logging.getLogger(name)
