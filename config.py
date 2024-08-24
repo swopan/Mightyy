@@ -39,7 +39,7 @@ TUT_VID = os.environ.get("TUT_VID","gojfsi/2")
 
 
 #force sub channel id, if you want enable force sub
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1002000107085"))
+FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1002240765242"))
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "100"))
 
@@ -88,7 +88,5 @@ logging.basicConfig(
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 
-def LOGGER(name: str) -> logging.Logger:
-    return logging.getLogger(name)
 def LOGGER(name: str) -> logging.Logger:
     return logging.getLogger(name)
